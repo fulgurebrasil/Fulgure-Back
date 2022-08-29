@@ -6,13 +6,14 @@ import java.util.Iterator;
 import sh.surge.fulgure.fulgure_brasil.repository.QuestaoRepository;
 
 public class Questao {
+
     private static int idCounter = 0;
 
     private String comando, curiosidade, dica, resposta;
     private int id, tempo, pontuacao;
     private ArrayList<String> alternativas;
 
-    public Questao(){
+    public Questao() {
         this.id = ++Questao.idCounter;
     }
 
@@ -27,7 +28,8 @@ public class Questao {
         this.alternativas = new ArrayList<>();
     }
 
-    public void cadastraAlternativa(int id, String alternativa1, String alternativa2, String alternativa3, String alternativa4, String alternativa5){
+    public void cadastraAlternativa(int id, String alternativa1, String alternativa2, String alternativa3,
+            String alternativa4, String alternativa5) {
         Questao questaoRecebida = QuestaoRepository.getById(id);
         questaoRecebida.alternativas.add(alternativa1);
         questaoRecebida.alternativas.add(alternativa2);
@@ -36,17 +38,25 @@ public class Questao {
         questaoRecebida.alternativas.add(alternativa5);
     }
 
-    public String exibeAlternativas(){
+    public String exibeAlternativas() {
         Iterator it = this.alternativas.iterator();
         String alternativa = null;
-        while(it.hasNext()){
-             alternativa = (String) it.next();
+        while (it.hasNext()) {
+            alternativa = (String) it.next();
         }
         return alternativa;
     }
 
     public int getId() {
         return id;
+    }
+
+    public ArrayList<String> getAlternativas() {
+        return alternativas;
+    }
+
+    public void setAlternativas(ArrayList<String> alternativas) {
+        this.alternativas = alternativas;
     }
 
     public String getComando() {
@@ -88,5 +98,5 @@ public class Questao {
     public void setPontuacao(int pontuacao) {
         this.pontuacao = pontuacao;
     }
-    
+
 }
