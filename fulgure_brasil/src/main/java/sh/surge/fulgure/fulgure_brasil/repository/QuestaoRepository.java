@@ -58,21 +58,3 @@ public class QuestaoRepository {
         return QuestaoRepository.repo.questoes.stream().filter((questao) -> questao.getId() == id).toList().get(0);
     }
 }
-
-// new Questao("Alimentos como churrasco, polenta e chimarrão são típicos de
-// qual região?", "curiosidade", "dica", "Sul", 120,
-// 3).cadastraAlternativa("Norte", "Nordeste", "Centro-Oeste", "Sul",
-// "Sudeste");
-// new Questao("O cordel é um gênero literário popular brasileiro, na maioria
-// das vezes composto por rimas, que se originou através de falas e relatos. Em
-// qual região o cordel se formou?", "curiosidade", "dica", "Nordeste", 120,
-// 3).cadastraAlternativa("Nordeste", "Norte", "Centro-Oeste", "Sul",
-// "Sudeste");
-// new Questao("Em qual estado se encontra a maior metrópole do Brasil e qual é
-// o nome dela?", "curiosidade", "dica", "Sudeste, São Paulo", 120,
-// 3).cadastraAlternativa("Nordeste, Fortaleza", "Sudeste, Rio de Janeiro",
-// "Sudeste, São Paulo", "Centro-Oeste, Brasília", "Sul, Porto Alegre");
-// new Questao("O Pantanal é um importante bioma encontrado no Brasil, no
-// Paraguai e na Bolívia. Em que região brasileira ele está localizado?",
-// "curiosidade", "dica", "Centro-Oeste", 120, 3).cadastraAlternativa("Sudeste",
-// "Nordeste", "Sul", "Norte", "Centro-Oeste")

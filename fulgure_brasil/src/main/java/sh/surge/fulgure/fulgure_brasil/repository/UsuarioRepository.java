@@ -14,12 +14,14 @@ public class UsuarioRepository {
 
     public static void init(){
         if (UsuarioRepository.repo == null){
-            //Criando repositório
+            //Criando usuário
             UsuarioRepository.repo = new UsuarioRepository();
-            //Adicionando usuários
-            // UsuarioRepository.add(
-            // );
-        } 
+
+            UsuarioRepository.add(
+                new Usuario("Julia", "julinha@gmail.com", "julinhatop")
+            );
+        }
+
     }
 
         public static void add(Usuario Usuario) {
@@ -30,8 +32,8 @@ public class UsuarioRepository {
         return UsuarioRepository.repo.usuarios;
     }
 
-    // Recupera Questão pelo Id
-    // public static Usuario getById(int id) {
-    //     return UsuarioRepository.repo.usuarios.stream().filter((Usuario) -> Usuario.getId() == id).toList().get(0);
-    // }
+    // Recupera Usuario pelo Id
+    public static Usuario getById(int id) {
+        return UsuarioRepository.repo.usuarios.stream().filter((Usuario) -> Usuario.getId() == id).toList().get(0);
+    }
 }
