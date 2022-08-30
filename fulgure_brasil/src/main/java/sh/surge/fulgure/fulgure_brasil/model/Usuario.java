@@ -12,7 +12,7 @@ public class Usuario {
     }
 
     public Usuario(String nome, String email, String senha) {
-        this.vidas = 5;
+        this.vidas = 0;
         this.pontuacao = 0;
         this.nome = nome;
         this.email = email;
