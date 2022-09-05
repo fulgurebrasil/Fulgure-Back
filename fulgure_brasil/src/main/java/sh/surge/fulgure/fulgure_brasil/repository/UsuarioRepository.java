@@ -18,7 +18,13 @@ public class UsuarioRepository {
             UsuarioRepository.repo = new UsuarioRepository();
 
             UsuarioRepository.add(
-                new Usuario("Julia", "julinha@gmail.com", "julinhatop")
+                new Usuario("Usuário Teste 1", "teste1@gmail.com", "testando")
+            );
+            UsuarioRepository.add(
+                new Usuario("Usuário Teste 2", "teste2@gmail.com", "testando")
+            );
+            UsuarioRepository.add(
+                new Usuario("Usuário Teste 3", "teste3@gmail.com", "testando")
             );
         }
 
