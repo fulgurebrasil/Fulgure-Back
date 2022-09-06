@@ -43,7 +43,8 @@ public class UsuarioRepository {
         return UsuarioRepository.repo.usuarios.stream().filter((Usuario) -> Usuario.getId() == id).toList().get(0);
     }
     public static boolean deleteById(int id) {
-        UsuarioRepository.repo.usuarios.remove(id);
+        Usuario userToDelete = getById(id);
+        UsuarioRepository.repo.usuarios.remove(userToDelete);
         return true;
     }
 }
